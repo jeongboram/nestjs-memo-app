@@ -17,9 +17,6 @@ export class BoardsController {
 	createBoard(@Body() createBoardDto: CreateBoardDto): Board {
 		return this.boardsService.createBoard(createBoardDto);
 	}
-	// createBoard(@Body('title') title: string, @Body('description') description: string): Board {
-	// 	return this.boardsService.createBoard(title, description);
-	// }
 
 	@Get('/:id')
 	getBoardById(@Param('id') id: string): Board {
